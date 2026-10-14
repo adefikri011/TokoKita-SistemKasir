@@ -1,0 +1,72 @@
+/* ============================================================
+   TokoKita — Design Tokens
+   Sumber kebenaran tunggal untuk warna, radius, shadow, font.
+   Halaman baru WAJIB memakai variabel ini, bukan warna hardcode.
+   ============================================================ */
+
+:root {
+  /* --- Warna dasar --- */
+  --c-bg:            #e9ebef;
+  --c-surface:       #e9ebef;
+  --c-surface-2:     #e4e6eb;
+  --c-surface-3:     #dfe2e8;
+
+  /* --- Sidebar (navy gelap) --- */
+  --c-sidebar:       #0B1B3F;
+  --c-sidebar-2:     #12244D;
+  --c-sidebar-text:  #A8B8D9;
+  --c-sidebar-active:#19a78c;
+
+  /* --- Teks --- */
+  --c-text:          #26323a;
+  --c-text-2:        #64727b;
+  --c-text-3:        #8b969e;
+  --c-text-invert:   #FFFFFF;
+
+  /* --- Garis --- */
+  --c-border:        rgba(255, 255, 255, .62);
+  --c-border-2:      #cbd0d7;
+
+  /* --- Aksen --- */
+  --c-primary:       #168f79;
+  --c-primary-600:   #117561;
+  --c-primary-50:    #d9f1ea;
+  --c-primary-100:   #bce5da;
+
+  --c-success:       #18876e;
+  --c-success-50:    #d9efe8;
+  --c-warning:       #bd7a28;
+  --c-warning-50:    #f5e8d1;
+  --c-danger:        #c05252;
+  --c-danger-50:     #f4dddd;
+  --c-purple:        #7665a6;
+  --c-purple-50:     #e8e3f3;
+
+  /* --- Radius --- */
+  --r-sm:  10px;
+  --r-md:  14px;
+  --r-lg:  20px;
+  --r-xl:  26px;
+  --r-full: 999px;
+
+  /* --- Bayangan --- */
+  --sh-xs:  3px 3px 7px rgba(163, 169, 179, .42), -3px -3px 7px rgba(255, 255, 255, .72);
+  --sh-sm:  6px 6px 14px rgba(163, 169, 179, .42), -6px -6px 14px rgba(255, 255, 255, .72);
+  --sh-md:  10px 10px 22px rgba(163, 169, 179, .46), -10px -10px 22px rgba(255, 255, 255, .78);
+  --sh-lg:  14px 14px 30px rgba(163, 169, 179, .48), -14px -14px 30px rgba(255, 255, 255, .8);
+  --sh-xl:  22px 22px 48px rgba(139, 146, 157, .45), -18px -18px 42px rgba(255, 255, 255, .82);
+
+  /* --- Tipografi --- */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-num:  'Inter', system-ui, sans-serif;
+
+  /* --- Layout --- */
+  --sidebar-w:      264px;
+  --sidebar-w-mini: 76px;
+  --header-h:       72px;
+
+  /* --- Transisi --- */
+  --t-fast:   140ms cubic-bezier(.4, 0, .2, 1);
+  --t-base:   180ms cubic-bezier(.4, 0, .2, 1);
+  --t-slow:   260ms cubic-bezier(.4, 0, .2, 1);
+}

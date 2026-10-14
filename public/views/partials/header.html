@@ -1,0 +1,33 @@
+<header class="app-header">
+  <div class="app-header-left">
+    <button class="icon-btn" id="btnToggleSidebar" aria-label="Ciutkan sidebar" aria-expanded="true" type="button">
+      <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+    </button>
+    <div style="min-width:0">
+      <h2 class="app-header-title" id="headerPageTitle">TokoKita</h2>
+      <p class="app-header-sub" id="headerPageSub">—</p>
+    </div>
+  </div>
+
+  <div class="app-header-right">
+    <span class="badge badge-info badge-plain" id="headerClock" style="font-variant-numeric:tabular-nums">—</span>
+
+    <div class="dropdown-wrap">
+      <button class="user-chip" id="btnUserMenu" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="avatar" id="headerUserAvatar">?</span>
+        <span class="chip-text">
+          <span class="chip-name" id="headerUserName">—</span>
+        </span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+
+      <div class="dropdown" id="userDropdown" hidden>
+        <button class="dropdown-item is-danger" type="button" id="btnLogoutHeader">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg>
+          Keluar
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

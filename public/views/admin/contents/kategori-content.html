@@ -1,0 +1,66 @@
+<div class="page-actions">
+  <button id="btnAddCategory" class="btn btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+    Tambah Kategori
+  </button>
+</div>
+
+<div class="toolbar-card">
+  <div class="input-icon-wrap" style="flex:1;min-width:240px;max-width:420px">
+    <span class="input-ico">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </span>
+    <input type="text" id="searchCategoryInput" placeholder="Cari nama kategori..." class="field">
+  </div>
+</div>
+
+<div class="table-card">
+  <div class="table-scroll">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Deskripsi</th>
+          <th style="text-align:right">Jumlah Barang</th>
+          <th style="text-align:right">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="categoryTableBody">
+        <tr><td colspan="4" class="cell-empty">Memuat data...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div id="categoryModal" class="modal-overlay hidden">
+  <div class="modal-box" style="max-width:460px">
+    <div class="modal-head" style="margin-bottom:18px">
+      <div>
+        <h3 id="categoryModalTitle" class="modal-title">Tambah Kategori</h3>
+        <p class="modal-desc">Kelompokkan barang agar mudah dicari</p>
+      </div>
+      <button type="button" id="btnCloseCategoryModal" class="modal-close" aria-label="Tutup">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <form id="categoryModalForm">
+      <div style="margin-bottom:14px">
+        <label class="field-label" for="cat-name">Nama Kategori</label>
+        <input class="field" id="cat-name" name="name" required maxlength="80" placeholder="Contoh: Makanan Ringan">
+      </div>
+      <div style="margin-bottom:4px">
+        <label class="field-label" for="cat-desc">Deskripsi</label>
+        <textarea class="field" id="cat-desc" name="description" rows="3" maxlength="255" placeholder="Opsional" style="resize:vertical;min-height:84px"></textarea>
+      </div>
+
+      <div class="modal-foot">
+        <button type="button" id="btnCancelCategoryModal" class="btn btn-ghost">Batal</button>
+        <button type="submit" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Simpan
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

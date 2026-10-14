@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokoKita - Masuk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="app-body auth-body">
+  <div class="auth-wrap">
+    <div class="auth-brand">
+      <span class="brand-mark">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 2-4h16l2 4"/><path d="M4 7v13a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7"/><path d="M2 7h20"/><path d="M9 11h6"/></svg>
+      </span>
+      <div>
+        <h1>Toko<span>Kita</span></h1>
+        <p>Sistem Kasir &amp; Manajemen Toko Kelontong</p>
+      </div>
+    </div>
+
+    <form id="loginForm" class="auth-card">
+      <h2 class="auth-title">Selamat datang kembali</h2>
+      <p class="auth-sub">Masuk untuk melanjutkan aktivitas toko</p>
+
+      <div style="margin-bottom:16px">
+        <label class="field-label" for="username">Username</label>
+        <div class="input-icon-wrap">
+          <span class="input-ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <input class="field" id="username" name="username" autocomplete="username"
+                 placeholder="nama pengguna" required autofocus>
+        </div>
+      </div>
+
+      <div style="margin-bottom:18px">
+        <label class="field-label" for="password">Password</label>
+        <div class="input-icon-wrap">
+          <span class="input-ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </span>
+          <input class="field" id="password" name="password" type="password"
+                 autocomplete="current-password" placeholder="••••••••" required>
+        </div>
+      </div>
+
+      <p id="loginError" class="auth-error"></p>
+
+      <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+    </form>
+
+    <p class="auth-hint">
+      Akun demo
+      <br>
+      <span class="chip">Admin <code>admin</code> · <code>admin123</code></span>
+      <span class="chip">Kasir <code>kasir</code> · <code>kasir123</code></span>
+    </p>
+  </div>
+
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>

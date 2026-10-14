@@ -1,0 +1,109 @@
+<div class="page-actions">
+  <button id="btnAddProduct" class="btn btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+    Tambah Barang
+  </button>
+</div>
+
+<!-- Search Bar -->
+<div class="toolbar-card">
+  <div class="input-icon-wrap" style="flex:1;min-width:240px;max-width:420px">
+    <span class="input-ico">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </span>
+    <input type="text" id="searchProductInput" placeholder="Cari nama atau kode barang..." class="field">
+  </div>
+</div>
+
+<!-- Tabel Data Barang -->
+<div class="table-card">
+  <div class="table-scroll">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Kode</th>
+          <th>Nama Barang</th>
+          <th>Satuan</th>
+          <th style="text-align:right">Harga Beli (Modal)</th>
+          <th style="text-align:right">Harga Jual</th>
+          <th style="text-align:right">Stok</th>
+          <th style="text-align:right">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="productTableBody">
+        <tr><td colspan="7" class="cell-empty">Memuat data...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Tambah / Edit Barang -->
+<div id="productModal" class="modal-overlay hidden">
+  <div class="modal-box" style="max-width:520px">
+    <div class="modal-head" style="margin-bottom:18px">
+      <div>
+        <h3 id="productModalTitle" class="modal-title">Tambah Barang</h3>
+        <p class="modal-desc">Lengkapi data barang di bawah ini</p>
+      </div>
+      <button type="button" id="btnCloseModal" class="modal-close" aria-label="Tutup">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <form id="productModalForm">
+      <div style="margin-bottom:14px">
+        <label class="field-label" for="f-code">Kode Barang</label>
+        <input class="field" id="f-code" name="code" required placeholder="BRG-0009">
+      </div>
+      <div style="margin-bottom:14px">
+        <label class="field-label" for="f-name">Nama Barang</label>
+        <input class="field" id="f-name" name="name" required placeholder="Nama produk">
+      </div>
+      <div style="margin-bottom:14px">
+        <label class="field-label" for="f-unit">Satuan Jual</label>
+        <select class="field" id="f-unit" name="unit" required>
+          <option value="pcs">pcs</option>
+          <option value="pak">pak</option>
+          <option value="kg">kg</option>
+          <option value="gram">gram</option>
+          <option value="liter">liter</option>
+          <option value="box">box</option>
+          <option value="lusin">lusin</option>
+          <option value="karung">karung</option>
+        </select>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div>
+          <label class="field-label" for="f-buy">Harga Beli (Modal)</label>
+          <input class="field" id="f-buy" name="buy_price" type="number" min="0" step="any" required>
+        </div>
+        <div>
+          <label class="field-label" for="f-sell">Harga Jual</label>
+          <input class="field" id="f-sell" name="sell_price" type="number" min="0" step="any" required>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div>
+          <label class="field-label" for="f-stock">Stok</label>
+          <input class="field" id="f-stock" name="stock" type="number" min="0" step="0.001" required>
+        </div>
+        <div>
+          <label class="field-label" for="f-category">Kategori</label>
+          <select class="field" id="f-category" name="category_id">
+            <option value="">— Tanpa kategori —</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal-foot">
+        <button type="button" id="btnCancelModal" class="btn btn-ghost">Batal</button>
+        <button type="submit" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Simpan
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

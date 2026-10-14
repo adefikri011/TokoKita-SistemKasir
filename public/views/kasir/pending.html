@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TokoKita - Transaksi Pending</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>if (localStorage.getItem('tokokita.sidebar.collapsed') === 'true' && !matchMedia('(max-width: 900px)').matches) document.documentElement.classList.add('sidebar-collapsed');</script>
+</head>
+
+<body class="app-body">
+  <div id="layout-sidebar"></div>
+
+  <div class="app-main">
+    <div id="layout-header"></div>
+    <main id="layout-content" class="page-content"></main>
+  </div>
+
+  <div id="layout-bottomnav"></div>
+
+  <script type="module">
+    import { renderPage, guardRole } from '/js/utils/layout.js';
+    import { initPendingPage } from '/js/kasir/pending.js';
+
+    if (guardRole('kasir', 'admin')) {
+      renderPage({
+        title: 'Transaksi Pending',
+        sidebar: 'kasir',
+        contentPath: '/views/kasir/contents/pending-content.html',
+        header: { subtitle: 'Tagih atau batalkan transaksi tertunda' },
+        onReady: initPendingPage
+      });
+    }
+  </script>
+</body>
+</html>
